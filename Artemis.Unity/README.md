@@ -1,2 +1,0 @@
-# Artemis
-Unity Vuforia project
