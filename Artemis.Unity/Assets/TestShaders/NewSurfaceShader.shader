@@ -39,7 +39,12 @@
 			float4 FragmentFunction(VertexOutput i) : COLOR
 			{
 				float4 baseColor = tex2D(BaseTexture, float2(i.UV.x, i.UV.y));
-				return baseColor * (ElapsedTime * 0.01 % 1);
+				return float4(
+					baseColor.x * sin(ElapsedTime * 0.001 + 0),
+					baseColor.y * sin(ElapsedTime * 0.001 + 34),
+					baseColor.z * sin(ElapsedTime * 0.001 + 125),
+					baseColor.w);
+				//return baseColor * (ElapsedTime * 0.01 % 1);
 				//return float4(ElapsedTime % 1,0,0,1);
 			}
 
