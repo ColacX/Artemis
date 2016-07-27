@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="85_hr" size="1.000000 0.772727" />
+    <ImageTarget name="pinecone" size="1.000000 1.290000" />
+    <ImageTarget name="symbio_welcome" size="1.000000 0.606248" />
+    <ImageTarget name="mantra3" size="1.000000 1.114507" />
+    <ImageTarget name="escape_plan" size="1.000000 0.705958" />
+    <ImageTarget name="mantra2" size="1.000000 1.407116" />
+    <ImageTarget name="mantra1" size="1.000000 1.318811" />
+    <ImageTarget name="C1-11" size="1.000000 1.000000" />
+    <ImageTarget name="c35-eg-n" size="1.000000 1.000000" />
+    <ImageTarget name="b2-dg-n" size="1.000000 1.000000" />
+    <ImageTarget name="symbio_logo_cmyk_white_bg-2" size="1.000000 0.770000" />
     <ImageTarget name="tarmac" size="1.000000 0.699732" />
     <ImageTarget name="stones" size="1.000000 0.700000" />
     <ImageTarget name="chips" size="1.000000 0.700000" />

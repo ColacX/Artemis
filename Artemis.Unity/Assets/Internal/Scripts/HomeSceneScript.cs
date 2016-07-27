@@ -19,13 +19,34 @@ public class HomeSceneScript : MonoBehaviour {
 
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
 		{
 			Debug.Log("OnVuforiaStarted");
 			Application.Quit();
 			System.Diagnostics.Process.GetCurrentProcess().Kill();
 		}
-	}
+
+        foreach(var touch in Input.touches)
+        {
+            var ray = Camera.main.ScreenPointToRay(touch.position);
+            var hit = Physics.Raycast(ray);
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+            var hit = Physics.Raycast(ray, out hitInfo);
+
+            if(hit)
+            {
+                Debug.Log(hitInfo);
+                hitInfo.rigidbody.angularVelocity += new Vector3(0, 1);
+            }
+            
+            Debug.DrawRay(ray.origin, ray.direction * 1000, Color.red, Time.deltaTime, false);
+        }
+    }
 
 	private void OnVuforiaStarted()
 	{
@@ -172,4 +193,16 @@ public class HomeSceneScript : MonoBehaviour {
 
 		return true;
 	}
+
+    public void QuitApplication()
+    {
+        Debug.Log("QuitApplication");
+        Application.Quit();
+        System.Diagnostics.Process.GetCurrentProcess().Kill();
+    }
+
+    public void Target1Clicked()
+    {
+        Debug.Log("Target1Clicked");
+    }
 }
