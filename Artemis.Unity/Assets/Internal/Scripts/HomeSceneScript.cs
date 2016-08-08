@@ -2,6 +2,7 @@
 using System.Collections;
 using Vuforia;
 using System;
+using UnityEngine.SceneManagement;
 
 public class HomeSceneScript : MonoBehaviour {
 	private bool mVuforiaStarted = false;
@@ -20,32 +21,30 @@ public class HomeSceneScript : MonoBehaviour {
 	void Update()
 	{
         if(Input.GetKeyDown(KeyCode.Escape))
-		{
-			Debug.Log("OnVuforiaStarted");
-			Application.Quit();
-			System.Diagnostics.Process.GetCurrentProcess().Kill();
-		}
-
-        foreach(var touch in Input.touches)
         {
-            var ray = Camera.main.ScreenPointToRay(touch.position);
-            var hit = Physics.Raycast(ray);
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % (SceneManager.sceneCount + 1));
         }
 
-        if(Input.GetMouseButtonDown(0))
-        {
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-            var hit = Physics.Raycast(ray, out hitInfo);
+        //      foreach(var touch in Input.touches)
+        //      {
+        //          var ray = Camera.main.ScreenPointToRay(touch.position);
+        //          var hit = Physics.Raycast(ray);
+        //      }
 
-            if(hit)
-            {
-                Debug.Log(hitInfo);
-                hitInfo.rigidbody.angularVelocity += new Vector3(0, 1);
-            }
-            
-            Debug.DrawRay(ray.origin, ray.direction * 1000, Color.red, Time.deltaTime, false);
-        }
+        //      if(Input.GetMouseButtonDown(0))
+        //      {
+        //          var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //          RaycastHit hitInfo;
+        //          var hit = Physics.Raycast(ray, out hitInfo);
+
+        //          if(hit)
+        //          {
+        //              Debug.Log(hitInfo);
+        //              hitInfo.rigidbody.angularVelocity += new Vector3(0, 1);
+        //          }
+
+        //          Debug.DrawRay(ray.origin, ray.direction * 1000, Color.red, Time.deltaTime, false);
+        //      }
     }
 
 	private void OnVuforiaStarted()

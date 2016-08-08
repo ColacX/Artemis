@@ -3,12 +3,12 @@ using System.Collections;
 
 public class CubeScript : MonoBehaviour
 {
-    BoxCollider boxCollider;
+    BoxCollider m_boxCollider;
 
     // Use this for initialization
     void Start()
     {
-        boxCollider = GetComponent<BoxCollider>();
+        m_boxCollider = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
