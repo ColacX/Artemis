@@ -16,14 +16,17 @@ public class HomeSceneScript : MonoBehaviour {
 		VuforiaAbstractBehaviour vuforia = FindObjectOfType<VuforiaAbstractBehaviour>();
 		vuforia.RegisterVuforiaStartedCallback(OnVuforiaStarted);
 		vuforia.RegisterOnPauseCallback(OnVuforiaPaused);
+
+		Physics.gravity = Quaternion.AngleAxis(-45, Vector3.right) * new Vector3(0, -9.81f, 0);
+		Debug.Log("Gravity: " + Physics.gravity);
 	}
 
 	void Update()
 	{
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % (SceneManager.sceneCount + 1));
-        }
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    //SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % (SceneManager.sceneCount + 1));
+        //}
 
         //      foreach(var touch in Input.touches)
         //      {

@@ -6,7 +6,7 @@
 		BaseTexture("BaseTexture", 2D) = "white" {}
 	}
 
-		SubShader
+	SubShader
 	{
 		Pass
 		{
