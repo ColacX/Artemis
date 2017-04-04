@@ -94,6 +94,7 @@
     <Compile Include="Assets\Internal\Scripts\OrigoLineScript.cs" />
     <Compile Include="Assets\Internal\Scripts\PanelScript.cs" />
     <Compile Include="Assets\Internal\Scripts\ShakeReducerScript.cs" />
+    <Compile Include="Assets\Internal\Scripts\SkeletonScript.cs" />
     <Compile Include="Assets\Internal\Scripts\TestSceneScript.cs" />
     <Compile Include="Assets\Internal\Scripts\TouchScript.cs" />
     <Compile Include="Assets\Internal\Scripts\TouchSpinScript.cs" />

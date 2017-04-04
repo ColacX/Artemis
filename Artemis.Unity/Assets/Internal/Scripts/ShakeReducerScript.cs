@@ -7,6 +7,8 @@ public class ShakeReducerScript : MonoBehaviour {
 	public GameObject target;
 
 	private float slerp = 0.1f;
+	private Vector3 position = Vector3.zero;
+	private Quaternion rotation = Quaternion.identity;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +18,7 @@ public class ShakeReducerScript : MonoBehaviour {
 	void Update () {
 		transform.position = Vector3.Slerp(this.transform.position, target.transform.position, slerp);
 		transform.rotation = Quaternion.Slerp(this.transform.rotation, target.transform.rotation, slerp);
+		
 		var tracker = target.GetComponent<DefaultTrackableEventHandler>();
 
 		if(tracker.Found)
