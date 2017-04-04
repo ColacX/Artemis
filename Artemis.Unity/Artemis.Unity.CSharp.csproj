@@ -152,6 +152,7 @@
     <None Include="Assets\Internal\Shaders\SimpleShader.shader" />
     <None Include="Assets\Internal\Shaders\WristWatchShader.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\SkeletonData\animations.txt" />
     <None Include="Assets\StreamingAssets\QCAR\StonesAndChips.xml" />
     <None Include="Assets\StreamingAssets\QCAR\Tarmac.xml" />
     <None Include="Assets\StreamingAssets\QCAR\VuforiaDeviceDatabase.xml" />
