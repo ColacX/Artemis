@@ -38,17 +38,18 @@ CGPROGRAM
 ENDCG
 		}
 
-		Pass
-		{
-			Cull Front
-			ZTest Less
-CGPROGRAM
-#pragma vertex vert
-#pragma fragment frag
-#include "UnityCG.cginc"
-#include "CharaOutline.cg"
-ENDCG
-		}
+//		Pass
+//		{
+//			Cull Front
+//			ZTest Less
+//CGPROGRAM
+//#pragma vertex vert
+//#pragma fragment frag
+//#include "UnityCG.cginc"
+//#include "CharaOutline.cg"
+//
+//ENDCG
+//		}
 
 	}
 

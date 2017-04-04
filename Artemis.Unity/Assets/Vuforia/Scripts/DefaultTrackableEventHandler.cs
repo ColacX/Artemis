@@ -14,9 +14,11 @@ namespace Vuforia
     public class DefaultTrackableEventHandler : MonoBehaviour,
                                                 ITrackableEventHandler
     {
-        #region PRIVATE_MEMBER_VARIABLES
- 
-        private TrackableBehaviour mTrackableBehaviour;
+		public bool Found = false;
+
+		#region PRIVATE_MEMBER_VARIABLES
+
+		private TrackableBehaviour mTrackableBehaviour;
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -68,7 +70,8 @@ namespace Vuforia
 
         private void OnTrackingFound()
         {
-            Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+			Found = true;
+			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
             // Enable rendering:
@@ -89,7 +92,8 @@ namespace Vuforia
 
         private void OnTrackingLost()
         {
-            Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+			Found = false;
+			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
             // Disable rendering:

@@ -25,7 +25,6 @@ public class FaceUpdate : MonoBehaviour
 
 	float current = 0;
 
-
 	void Update ()
 	{
 

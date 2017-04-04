@@ -39,18 +39,20 @@ public class IdleChanger : MonoBehaviour
 	// Update is called once per frame
 	void  Update ()
 	{
-		//// ↑キー/スペースが押されたら、ステートを次に送る処理
-		//if (Input.GetKeyDown ("up") || Input.GetButton ("Jump")) {
-		//	// ブーリアンNextをtrueにする
-		//	anim.SetBool ("Next", true);
-		//}
-		
-		//// ↓キーが押されたら、ステートを前に戻す処理
-		//		if (Input.GetKeyDown ("down")) {
-		//	// ブーリアンBackをtrueにする
-		//	anim.SetBool ("Back", true);
-		//}
-		
+		// ↑キー/スペースが押されたら、ステートを次に送る処理
+		if(Input.GetKeyDown("up") || Input.GetButton("Jump"))
+		{
+			// ブーリアンNextをtrueにする
+			anim.SetBool("Next", true);
+		}
+
+		// ↓キーが押されたら、ステートを前に戻す処理
+		if(Input.GetKeyDown("down"))
+		{
+			// ブーリアンBackをtrueにする
+			anim.SetBool("Back", true);
+		}
+
 		// "Next"フラグがtrueの時の処理
 		if (anim.GetBool ("Next")) {
 			// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
