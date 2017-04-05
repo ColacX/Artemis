@@ -101,6 +101,7 @@
     <Compile Include="Assets\Internal\Scripts\TrackedAnimationScript.cs" />
     <Compile Include="Assets\Internal\Scripts\WristWatchScript.cs" />
     <Compile Include="Assets\Particle Ribbon\Scripts\ReverseNormals.cs" />
+    <Compile Include="Assets\Planet Earth Free\SpinFree.cs" />
     <Compile Include="Assets\Scripts\ModelSwap.cs" />
     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
     <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
